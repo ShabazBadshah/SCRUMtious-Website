@@ -1,7 +1,9 @@
 const ROOT_IMG_DIR = "images/"
 const TRANSITION_DELAY_MS = 3000;
 const IMAGE_TYPE = ".png";
+const APP_LOCATION = 'SCRUMtious-release-demo.apk';
 var galleryItem;
+var downloadBtn;
 
 var appGalleryImageSrc = [
     ROOT_IMG_DIR + "app-splash-screen-min" + IMAGE_TYPE,
@@ -17,10 +19,15 @@ var appGalleryImageSrc = [
 $(function() {
 
     galleryItem = $('img#gallery-item');
-    // console.log(galleryItem.attr("src"));
+	downloadBtn = $('#download-app-button');
+	
+	downloadBtn.click(function() {
+		window.open(APP_LOCATION, 'Download');
+	});
+
     var currImageIdx = 0;
     var lengthAppGalleryImages = appGalleryImageSrc.length;
-
+	
     setInterval(function() {
         if (currImageIdx < lengthAppGalleryImages) {
             // Changes src of gallery image
