@@ -1,5 +1,5 @@
 const ROOT_IMG_DIR = "images/"
-const TRANSITION_DELAY_MS = 3000;
+const TRANSITION_DELAY_MS = 2000;
 const IMAGE_TYPE = ".png";
 const APP_LOCATION = 'SCRUMtious-release-demo.apk';
 var galleryItem;
